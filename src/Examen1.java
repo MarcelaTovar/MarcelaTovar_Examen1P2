@@ -1,8 +1,11 @@
+
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author marcela
@@ -171,6 +174,11 @@ public class Examen1 extends javax.swing.JFrame {
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
+            }
+        });
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
             }
         });
 
@@ -558,7 +566,35 @@ public class Examen1 extends javax.swing.JFrame {
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        String Ip = "", Mascara = "", Hostname = "", RAM = "", Almacenamiento = "", Tipo = "", TarjetaGrafica = "";
+        Ip = JTextField_direccionIPE.getText();
+        Mascara = JTextField_MascaraRedE.getText();
+        Hostname = JTextField_HostnameE.getText();
+        RAM = JTextField_RAME.getText();
+        Almacenamiento = JTextField_AlmacenamientoE.getText();
+        if (JTextField_Tipo.getText().equalsIgnoreCase("HDD") || JTextField_Tipo.getText().equalsIgnoreCase("SSD")) {
+            Tipo = JTextField_Tipo.getText();
+            if (JTextField_TarjetaGraficaE.getText().equalsIgnoreCase("Si")) {
+                Escritorio e = new Escritorio(RAM, Almacenamiento, Tipo, true, Ip, Mascara, Hostname);
+                Pcs.add(e);
+                JOptionPane.showMessageDialog(this, "PC INGRESADA CON EXITO");
+            } else if (JTextField_TarjetaGraficaE.getText().equalsIgnoreCase("No")) {
+                Escritorio e = new Escritorio(RAM, Almacenamiento, Tipo, false, Ip, Mascara, Hostname);
+                Pcs.add(e);
+                JOptionPane.showMessageDialog(this, "PC INGRESADA CON EXITO");
+            } else {
+                JOptionPane.showMessageDialog(this, "Ingrese Si o No");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Ingrese un tipo valido");
+        }
+
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -648,4 +684,5 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+ArrayList<PC> Pcs = new ArrayList();
 }

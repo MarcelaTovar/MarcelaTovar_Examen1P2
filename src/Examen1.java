@@ -86,6 +86,8 @@ public class Examen1 extends javax.swing.JFrame {
         JButton_Ingresar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JTextArea_Imprimir = new javax.swing.JTextArea();
         jPanel4 = new javax.swing.JPanel();
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
@@ -490,6 +492,11 @@ public class Examen1 extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
         jTabbedPane1.setBackground(new java.awt.Color(204, 255, 255));
+        jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane1MouseClicked(evt);
+            }
+        });
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -558,15 +565,25 @@ public class Examen1 extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(204, 255, 255));
 
+        JTextArea_Imprimir.setColumns(20);
+        JTextArea_Imprimir.setRows(5);
+        jScrollPane1.setViewportView(JTextArea_Imprimir);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 846, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 736, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 475, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Listar PC", jPanel3);
@@ -745,6 +762,12 @@ public class Examen1 extends javax.swing.JFrame {
         Frame_Crear.setVisible(false);
     }//GEN-LAST:event_jButton4MouseClicked
 
+    private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
+        // TODO add your handling code here:
+        JTextArea_Imprimir.setText(Pcs.toString());
+        System.out.println(JTextArea_Imprimir);
+    }//GEN-LAST:event_jTabbedPane1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -788,6 +811,7 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JFrame JFrame_Escritorio;
     private javax.swing.JFrame JFrame_Ingresar;
     private javax.swing.JFrame JFrame_Laptop;
+    private javax.swing.JTextArea JTextArea_Imprimir;
     private javax.swing.JTextField JTextField_AlmacenamientoE;
     private javax.swing.JTextField JTextField_HostnameE;
     private javax.swing.JTextField JTextField_HostnameL;
@@ -837,6 +861,7 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables

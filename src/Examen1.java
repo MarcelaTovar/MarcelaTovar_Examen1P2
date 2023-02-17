@@ -219,7 +219,7 @@ public class Examen1 extends javax.swing.JFrame {
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(JTextField_TarjetaGraficaE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(JTextField_TarjetaGraficaE, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -306,6 +306,11 @@ public class Examen1 extends javax.swing.JFrame {
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -593,8 +598,44 @@ public class Examen1 extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Ingrese un tipo valido");
         }
-
+        JTextField_direccionIPE.setText("");
+        JTextField_MascaraRedE.setText("");
+        JTextField_HostnameE.setText("");
+        JTextField_RAME.setText("");
+        JTextField_AlmacenamientoE.setText("");
+        JTextField_Tipo.setText("");
+        JTextField_TarjetaGraficaE.setText("");
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String Ip = "", Mascara = "", Hostname = "", Marca = "", Definicion = "", RGB = "";
+        Ip = JTextField_direccionIPL.getText();
+        Mascara = JTextField_MascaraRedL.getText();
+        Hostname = JTextField_HostnameL.getText();
+        Marca = JTextField_MarcaL.getText();
+        Definicion = JTextField_definicionPantallaL.getText();
+
+        if (JTextField_RGBL.getText().equalsIgnoreCase("Si")) {
+            RGB = JTextField_RGBL.getText();
+            Laptop p = new Laptop(Marca, Definicion, true, Ip, Mascara, Hostname);
+            Pcs.add(p);
+            JOptionPane.showMessageDialog(this, "PC INGRESADA CON EXITO");
+        } else if (JTextField_RGBL.getText().equalsIgnoreCase("No")) {
+            RGB = JTextField_RGBL.getText();
+            Laptop p = new Laptop(Marca, Definicion, false, Ip, Mascara, Hostname);
+            Pcs.add(p);
+            JOptionPane.showMessageDialog(this, "PC INGRESADA CON EXITO");
+        } else {
+            JOptionPane.showMessageDialog(this, "Ingrese Si o No");
+        }
+        JTextField_direccionIPL.setText("");
+        JTextField_MascaraRedL.setText("");
+        JTextField_HostnameL.setText("");
+        JTextField_MarcaL.setText("");
+        JTextField_definicionPantallaL.setText("");
+        JTextField_RGBL.setText("");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

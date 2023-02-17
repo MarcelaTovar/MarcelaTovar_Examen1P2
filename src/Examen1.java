@@ -71,6 +71,12 @@ public class Examen1 extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         buttonGroup1 = new javax.swing.ButtonGroup();
+        JFrame_Ingresar = new javax.swing.JFrame();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
@@ -93,6 +99,8 @@ public class Examen1 extends javax.swing.JFrame {
         );
 
         Frame_Crear.setBackground(new java.awt.Color(204, 204, 255));
+        Frame_Crear.setResizable(false);
+        Frame_Crear.setSize(new java.awt.Dimension(878, 558));
 
         jPanel5.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -151,6 +159,9 @@ public class Examen1 extends javax.swing.JFrame {
             Frame_CrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        JFrame_Escritorio.setResizable(false);
+        JFrame_Escritorio.setSize(new java.awt.Dimension(468, 506));
 
         jPanel6.setBackground(new java.awt.Color(216, 242, 222));
 
@@ -281,6 +292,7 @@ public class Examen1 extends javax.swing.JFrame {
         );
 
         jPanel7.setBackground(new java.awt.Color(216, 242, 222));
+        jPanel7.setSize(new java.awt.Dimension(468, 506));
 
         jLabel11.setText("LAPTOP");
 
@@ -402,6 +414,56 @@ public class Examen1 extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        JFrame_Ingresar.setResizable(false);
+        JFrame_Ingresar.setSize(new java.awt.Dimension(832, 537));
+
+        jPanel8.setBackground(new java.awt.Color(223, 235, 223));
+        jPanel8.setSize(new java.awt.Dimension(675, 531));
+
+        jLabel18.setText("Ingrese la posicion de la primera computadora: ");
+
+        jLabel19.setText("Ingrese la posicion de la segunda computadora: ");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel19))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField3)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19))
+                .addContainerGap(48, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout JFrame_IngresarLayout = new javax.swing.GroupLayout(JFrame_Ingresar.getContentPane());
+        JFrame_Ingresar.getContentPane().setLayout(JFrame_IngresarLayout);
+        JFrame_IngresarLayout.setHorizontalGroup(
+            JFrame_IngresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        JFrame_IngresarLayout.setVerticalGroup(
+            JFrame_IngresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 255));
 
@@ -419,6 +481,11 @@ public class Examen1 extends javax.swing.JFrame {
         JButton_Ingresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 JButton_IngresarMouseClicked(evt);
+            }
+        });
+        JButton_Ingresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JButton_IngresarActionPerformed(evt);
             }
         });
 
@@ -637,6 +704,12 @@ public class Examen1 extends javax.swing.JFrame {
         JTextField_RGBL.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void JButton_IngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_IngresarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_JButton_IngresarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -678,6 +751,7 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JButton JButton_Ingresar;
     private javax.swing.JButton JButton_Laptop;
     private javax.swing.JFrame JFrame_Escritorio;
+    private javax.swing.JFrame JFrame_Ingresar;
     private javax.swing.JFrame JFrame_Laptop;
     private javax.swing.JTextField JTextField_AlmacenamientoE;
     private javax.swing.JTextField JTextField_HostnameE;
@@ -706,6 +780,8 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -722,8 +798,11 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 ArrayList<PC> Pcs = new ArrayList();
 }

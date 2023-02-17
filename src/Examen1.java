@@ -74,9 +74,10 @@ public class Examen1 extends javax.swing.JFrame {
         JFrame_Ingresar = new javax.swing.JFrame();
         jPanel8 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        JTextField_PrimeraCom = new javax.swing.JTextField();
+        JTextField_SegundaCom = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
@@ -292,7 +293,7 @@ public class Examen1 extends javax.swing.JFrame {
         );
 
         jPanel7.setBackground(new java.awt.Color(216, 242, 222));
-        jPanel7.setSize(new java.awt.Dimension(468, 506));
+        jPanel7.setSize(new java.awt.Dimension(473, 537));
 
         jLabel11.setText("LAPTOP");
 
@@ -418,25 +419,42 @@ public class Examen1 extends javax.swing.JFrame {
         JFrame_Ingresar.setSize(new java.awt.Dimension(832, 537));
 
         jPanel8.setBackground(new java.awt.Color(223, 235, 223));
-        jPanel8.setSize(new java.awt.Dimension(675, 531));
+        jPanel8.setSize(new java.awt.Dimension(675, 224));
 
         jLabel18.setText("Ingrese la posicion de la primera computadora: ");
 
         jLabel19.setText("Ingrese la posicion de la segunda computadora: ");
+
+        jButton4.setText("OK");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel19))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel19))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(JTextField_SegundaCom)
+                            .addComponent(JTextField_PrimeraCom, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(250, 250, 250)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(76, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
@@ -445,12 +463,14 @@ public class Examen1 extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JTextField_PrimeraCom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTextField_SegundaCom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel19))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout JFrame_IngresarLayout = new javax.swing.GroupLayout(JFrame_Ingresar.getContentPane());
@@ -706,9 +726,24 @@ public class Examen1 extends javax.swing.JFrame {
 
     private void JButton_IngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_IngresarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        JFrame_Ingresar.setLocationRelativeTo(this);
+        JFrame_Ingresar.setVisible(true);
         
     }//GEN-LAST:event_JButton_IngresarActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        this.setVisible(false);
+        JFrame_Escritorio.setVisible(false);
+        JFrame_Ingresar.setVisible(false);
+        JFrame_Laptop.setVisible(false);
+        Frame_Crear.setVisible(false);
+    }//GEN-LAST:event_jButton4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -759,8 +794,10 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JTextField JTextField_MarcaL;
     private javax.swing.JTextField JTextField_MascaraRedE;
     private javax.swing.JTextField JTextField_MascaraRedL;
+    private javax.swing.JTextField JTextField_PrimeraCom;
     private javax.swing.JTextField JTextField_RAME;
     private javax.swing.JTextField JTextField_RGBL;
+    private javax.swing.JTextField JTextField_SegundaCom;
     private javax.swing.JTextField JTextField_TarjetaGraficaE;
     private javax.swing.JTextField JTextField_Tipo;
     private javax.swing.JTextField JTextField_definicionPantallaL;
@@ -770,6 +807,7 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -801,8 +839,6 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 ArrayList<PC> Pcs = new ArrayList();
 }

@@ -642,6 +642,7 @@ public class Examen1 extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        try{
         String Ip = "", Mascara = "", Hostname = "", RAM = "", Almacenamiento = "", Tipo = "", TarjetaGrafica = "";
         Ip = JTextField_direccionIPE.getText();
         Mascara = JTextField_MascaraRedE.getText();
@@ -671,6 +672,9 @@ public class Examen1 extends javax.swing.JFrame {
         JTextField_AlmacenamientoE.setText("");
         JTextField_Tipo.setText("");
         JTextField_TarjetaGraficaE.setText("");
+        }catch(IndexOutOfBoundsException e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

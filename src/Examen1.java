@@ -1,6 +1,9 @@
 
+import java.util.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -71,13 +74,6 @@ public class Examen1 extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         buttonGroup1 = new javax.swing.ButtonGroup();
-        JFrame_Ingresar = new javax.swing.JFrame();
-        jPanel8 = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        JTextField_PrimeraCom = new javax.swing.JTextField();
-        JTextField_SegundaCom = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
@@ -420,75 +416,6 @@ public class Examen1 extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        JFrame_Ingresar.setResizable(false);
-        JFrame_Ingresar.setSize(new java.awt.Dimension(832, 537));
-
-        jPanel8.setBackground(new java.awt.Color(223, 235, 223));
-        jPanel8.setSize(new java.awt.Dimension(675, 224));
-
-        jLabel18.setText("Ingrese la posicion de la primera computadora: ");
-
-        jLabel19.setText("Ingrese la posicion de la segunda computadora: ");
-
-        jButton4.setText("OK");
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4MouseClicked(evt);
-            }
-        });
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel18)
-                            .addComponent(jLabel19))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(JTextField_SegundaCom)
-                            .addComponent(JTextField_PrimeraCom, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(76, Short.MAX_VALUE))
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(JTextField_PrimeraCom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTextField_SegundaCom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19))
-                .addGap(28, 28, 28)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout JFrame_IngresarLayout = new javax.swing.GroupLayout(JFrame_Ingresar.getContentPane());
-        JFrame_Ingresar.getContentPane().setLayout(JFrame_IngresarLayout);
-        JFrame_IngresarLayout.setHorizontalGroup(
-            JFrame_IngresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        JFrame_IngresarLayout.setVerticalGroup(
-            JFrame_IngresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 255));
 
@@ -778,24 +705,33 @@ public class Examen1 extends javax.swing.JFrame {
 
     private void JButton_IngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_IngresarActionPerformed
         // TODO add your handling code here:
-        JFrame_Ingresar.setLocationRelativeTo(this);
-        JFrame_Ingresar.setVisible(true);
-
-    }//GEN-LAST:event_JButton_IngresarActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        // TODO add your handling code here:
+        Scanner leer = new Scanner(System.in);
         this.setVisible(false);
         JFrame_Escritorio.setVisible(false);
-        JFrame_Ingresar.setVisible(false);
         JFrame_Laptop.setVisible(false);
         Frame_Crear.setVisible(false);
-    }//GEN-LAST:event_jButton4MouseClicked
+        boolean check = true;
+        PC temporal = Pcs.get(new Random().nextInt((Pcs.size())));
+        do {
+            System.out.println(temporal.getHostName() + "#");
+            System.out.println("-- Ingrese que desea hacer -- (Exit/Show/ping_<IP>)");
+            String dec = leer.next();
+            if (dec.equalsIgnoreCase("Exit")) {
+                check = false;
+            } else if (dec.equalsIgnoreCase("Show")) {
+                System.out.println("El IP de la computadora es: ");
+                System.out.println(temporal.getIp());
+                System.out.println("La mascara de la computadora: ");
+                System.out.println(temporal.getMascaraDeRed());
+            } else if (dec.equals("ping_<IP>")) {
+                String IP_temporal = "";
+                temporal.metodoPing(IP_temporal, Pcs, temporal);
+            }
+        } while (check);
+        this.setVisible(true);
+
+
+    }//GEN-LAST:event_JButton_IngresarActionPerformed
 
     private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
         // TODO add your handling code here:
@@ -805,7 +741,7 @@ public class Examen1 extends javax.swing.JFrame {
     private void jTabbedPane1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseEntered
         // TODO add your handling code here:
         JTextArea_Imprimir.setText(Pcs.toString());
-        System.out.println(Pcs.toString());
+
     }//GEN-LAST:event_jTabbedPane1MouseEntered
 
     private void JButton_BorrarPosicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_BorrarPosicionActionPerformed
@@ -814,7 +750,7 @@ public class Examen1 extends javax.swing.JFrame {
         if (posicion < Pcs.size()) {
             Pcs.remove(posicion);
             JOptionPane.showMessageDialog(this, "Posicion Eliminada con Exito");
-        }else{
+        } else {
             JOptionPane.showMessageDialog(this, "Esta posicion no existe");
         }
     }//GEN-LAST:event_JButton_BorrarPosicionActionPerformed
@@ -861,7 +797,6 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JButton JButton_Ingresar;
     private javax.swing.JButton JButton_Laptop;
     private javax.swing.JFrame JFrame_Escritorio;
-    private javax.swing.JFrame JFrame_Ingresar;
     private javax.swing.JFrame JFrame_Laptop;
     private javax.swing.JTextArea JTextArea_Imprimir;
     private javax.swing.JTextField JTextField_AlmacenamientoE;
@@ -870,10 +805,8 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JTextField JTextField_MarcaL;
     private javax.swing.JTextField JTextField_MascaraRedE;
     private javax.swing.JTextField JTextField_MascaraRedL;
-    private javax.swing.JTextField JTextField_PrimeraCom;
     private javax.swing.JTextField JTextField_RAME;
     private javax.swing.JTextField JTextField_RGBL;
-    private javax.swing.JTextField JTextField_SegundaCom;
     private javax.swing.JTextField JTextField_TarjetaGraficaE;
     private javax.swing.JTextField JTextField_Tipo;
     private javax.swing.JTextField JTextField_definicionPantallaL;
@@ -883,7 +816,6 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -894,8 +826,6 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
@@ -913,7 +843,6 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTabbedPane jTabbedPane1;

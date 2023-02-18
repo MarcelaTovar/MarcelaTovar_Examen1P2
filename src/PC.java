@@ -96,7 +96,7 @@ public class PC {
                 }
                 
                 if (part) {
-                    System.out.println("Pinging to " + t[1] + "with 32 bits of data");
+                    System.out.println("Pinging to " + t[1] + " with 32 bits of data");
                     System.out.println("Reply from "+ t[1] +": bytes = 32 time = 37 ms TIL = 46");
                     System.out.println("Reply from "+ t[1] +": bytes = 32 time = 37 ms TIL = 46");
                     System.out.println("Reply from "+ t[1] +": bytes = 32 time = 37 ms TIL = 46");
@@ -105,7 +105,7 @@ public class PC {
                     System.out.println("    Packets: Sent = 4, Recieved = 4, Lost = 0( 0% Lost)");
                     System.out.println(t[0]);
                 }else{
-                    System.out.println("Pinging to " + t[1] + "with 32 bits of data");
+                    System.out.println("Pinging to " + t[1] + " with 32 bits of data");
                     System.out.println("Reply from "+ t[1] +": Destination host unrechable");
                     System.out.println("Reply from "+ t[1] +": Destination host unrechable");
                     System.out.println("Reply from "+ t[1] +": Destination host unrechable");
@@ -116,7 +116,7 @@ public class PC {
                 }
             }
         } else {
-            System.out.println("Pinging to " + t[1] + "with 32 bits of data");
+            System.out.println("Pinging to " + t[1] + " with 32 bits of data");
             System.out.println("Requested time out");
             System.out.println("Requested time out");
             System.out.println("Requested time out");
